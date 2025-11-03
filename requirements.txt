@@ -1,0 +1,19 @@
+# PromoAgente - Dependências Corrigidas para OpenAI
+
+# Core AI Framework
+agno==2.1.9
+openai==1.40.0
+
+# Web Framework
+fastapi==0.110.0
+uvicorn==0.24.0
+
+# Utilities
+python-dotenv==1.0.0
+aiosqlite==0.19.0
+sqlalchemy==2.0.23
+httpx<0.28
+
+# Templates and Forms
+jinja2==3.1.2
+python-multipart==0.0.6
