@@ -3,6 +3,7 @@ Promotional Agent Module
 Main application that uses OCR to analyze promotional materials
 """
 import logging
+import re
 from azure_ocr_service import AzureOCRService
 
 # Configure logging
@@ -91,7 +92,6 @@ class PromoAgent:
         found_keywords = [kw for kw in promotional_keywords if kw.lower() in text_lower]
         
         # Detect numbers (prices, percentages)
-        import re
         numbers = re.findall(r'\d+[.,]?\d*', text)
         percentages = re.findall(r'\d+\s*%', text)
         prices = re.findall(r'R\$\s*\d+[.,]?\d*|\$\s*\d+[.,]?\d*', text)
